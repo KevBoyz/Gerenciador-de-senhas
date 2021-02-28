@@ -1,0 +1,6 @@
+cursor.execute("""
+CREATE TABLE passwords (
+        domain TEXT NOT NULL,
+        password TEXT NOT NULL
+);
+""")
