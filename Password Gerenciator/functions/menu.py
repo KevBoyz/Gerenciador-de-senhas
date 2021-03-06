@@ -17,8 +17,10 @@ def title(txt):
 
 
 def menu():
-    title('Menu Principal')
-    print(f'''{clr("green")} 1 - {clr("blue")}Salvar senha
-{clr("green")} 2 - {clr("blue")}Conferir senhas salvas
-{clr("green")} 3 - {clr("blue")}Exportar senhas em formato txt
-{clr("white")}{'-'*40}''')
+    print()
+    print(f'''{clr("green")} [1] {clr("blue")}Salvar senha {clr("green")}         
+{clr("green")} [2] {clr("blue")}Senhas existentes {clr("green")}    
+{clr("green")} [3] {clr("blue")}Exportar senhas {clr("green")}''')
+
+
+
