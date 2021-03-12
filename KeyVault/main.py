@@ -4,18 +4,19 @@ import sqlite3 as sql
 
 conn = sql.connect('passwords.db')
 cursor = conn.cursor()
-admin = 'admin'
 fail = 0
+admin = 'admin'
+
 
 def save():
-    p_attribute = input(f'{cl("g")}Atributo: ')
+    p_service = input(f'{cl("g")}Serviço: ')
     p_login = input(f'{cl("g")}Login: ')
     p_password = input(f'{cl("g")}Senha: ')
     print()
     cursor.execute("""
-  INSERT INTO passwords (atribute, login, password)
+  INSERT INTO passwords (service, login, password)
   VALUES (?,?,?)
-  """, (p_attribute, p_login, p_password))
+  """, (p_service, p_login, p_password))
     conn.commit()
 
     print(f'{cl("w")}Dados salvos')
@@ -27,7 +28,7 @@ def access():
     cursor.execute("""
             SELECT * FROM passwords;
             """)
-    [print(f'{cl("g")}{a} {cl("w")}== {cl("p")}{l} {cl("w")}: {cl("b+")}{p}') for a, l, p in cursor.fetchall()]
+    [print(f'{cl("g")}{s} {cl("w")}== {cl("p")}{l} {cl("w")}: {cl("b+")}{p}') for s, l, p in cursor.fetchall()]
     print()
 
 
@@ -36,7 +37,7 @@ def export():
     cursor.execute("""
                 SELECT * FROM passwords;
                 """)
-    [txt.write(f'{a} == {l} : {p} | ') for a, l, p in cursor.fetchall()]
+    [txt.write(f'{s} == {l} : {p} | ') for s, l, p in cursor.fetchall()]
     print()
     print(f'{cl("g")}Dados exportados com sucesso para data.txt')
 
