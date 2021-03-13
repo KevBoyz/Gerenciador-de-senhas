@@ -1,3 +1,6 @@
+import os
+
+
 def cl(color):
     colors = {
         "r": '\033[31m',
@@ -11,12 +14,24 @@ def cl(color):
     return colors[color]
 
 
-
 def menu():
-    print()
-    print(f'''{cl("g")}[1] {cl("b")}Salvar senha {cl("g")}         
+    print(f'''{cl("g")}
+     _   __              _   _                _  _   
+    | | / /             | | | |              | || |  
+    | |/ /   ___  _   _ | | | |  __ _  _   _ | || |_ 
+    |    \  / _ \| | | || | | | / _` || | | || || __|
+    | |\  \|  __/| |_| |\ \_/ /| (_| || |_| || || |_ 
+    \_| \_/ \___| \__, | \___/  \__,_| \__,_||_| \__|
+                   __/ |    Version 1.3 by KevBoyz                        
+                  |___/
+
+{cl("g")}[1] {cl("b")}Salvar senha {cl("g")}         
 [2] {cl("b")}Senhas existentes {cl("g")}    
-[3] {cl("b")}Exportar senhas''')
+[3] {cl("b")}Exportar senhas
+''')
 
 
+def clear():
+    os.system('cls') if os.name == 'nt' else os.system('clear')
+    menu()
 

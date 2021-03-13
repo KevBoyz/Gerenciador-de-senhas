@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Gerenciador de senhas.iml" filepath="$PROJECT_DIR$/.idea/Gerenciador de senhas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/KeyVault.iml" filepath="$PROJECT_DIR$/.idea/KeyVault.iml" />
     </modules>
   </component>
 </project>

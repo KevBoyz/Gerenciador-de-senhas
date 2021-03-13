@@ -1,0 +1,6 @@
+Google.com == kevin@gmail.com : 12345 
+a == 12 : asd 
+Outlook == kk@hotmail.com : ##TT65 
+kkk == 123 : 123 
+12 == 12 : 12 
+123 == 123 : 123 
