@@ -1,4 +1,6 @@
 from time import sleep
+from datetime import datetime
+
 
 def cl(color):
     colors = {
@@ -11,6 +13,7 @@ def cl(color):
         "w": '\033[38m'
     }
     return colors[color]
+
 
 def password(admin, fail):
     while True:
@@ -27,3 +30,7 @@ def password(admin, fail):
                 print(f'{cl("r")}Senha errada varias vezes, espere 10 segundos e tente novamente')
                 sleep(10)
             continue
+
+
+def get_time():
+    return datetime.now().ctime()

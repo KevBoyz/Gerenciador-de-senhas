@@ -5,3 +5,9 @@ CREATE TABLE passwords (
         password TEXT NOT NULL
 );
 """)
+cursor.execute("""
+CREATE TABLE security_log (
+        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        date TEXT NOT NULL
+);
+""")
